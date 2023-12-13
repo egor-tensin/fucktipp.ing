@@ -1,0 +1,65 @@
+---
+layout: page
+title: Fuck Tipping
+points:
+  - title: Tipping is hostile to customers.
+    description:
+      - |
+        Businesses embrace the tipping culture so that they can offload the
+        responsibility to pay proper wages onto their customers while
+        <em>still</em> selling their products with a high profit margin.
+        So the customer pays the margin twice &mdash; it's <em>already
+        included</em> in the bill, <em>and</em> in the tip you're "supposed" to
+        leave.
+      - |
+        Furthermore, tipping is manipulative in nature.
+        It exploits customers by using their egos, as well as senses of guilt
+        &amp; duty.
+        Sometimes, even peer pressure!
+        Personally, I'd prefer to just pay the bill.
+  - title: Tipping is hostile to workers.
+    description:
+      - |
+        Bosses can use the knowledge about their workers' tips against them.
+        While the income from tips is often low &amp; unstable, bosses will
+        still use them to refuse salary increases, health insurance upgrades,
+        etc.
+        Therefore, tipping destroys the power of employees during salary &amp;
+        benefits negotiations.
+  - title: Tipping encourages bias.
+    description:
+      - |
+        The tipping culture promotes unfairness and bias, because customers are
+        prioritized based on their perceived generousity (and treated
+        accordingly).
+  - title: Tipping is awkward &amp; lame.
+    description:
+      - |
+        Anybody can remember countless times they were trying to collect enough
+        cash from people at the table to make for a "decent" tip.
+        Or the awkward, rushed calculation of the number to write down in a
+        special "Tip:" field that you know the waiter will inspect momentarily.
+        Or the stupid iPad tipping machines that are now part of the web
+        folklore?
+        Jesus Christ, give me a break.
+---
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="display-1">Don't Tip!</h1>
+      <p class="lead">Tipping fucking sucks for everybody, don't do it.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+{% assign pointer_counter = 0 %}
+{% for point in page.points %}
+  {% assign pointer_counter = pointer_counter | plus: 1 %}
+  <h4>{{ pointer_counter }}. {{ point.title }}</h4>
+  {% for para in point.description %}
+    <p class="text-muted">{{ para }}</p>
+  {% endfor %}
+{% endfor %}
+    </div>
+  </div>
+</div>
