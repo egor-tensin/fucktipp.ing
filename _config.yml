@@ -1,0 +1,8 @@
+source: src
+destination: build
+
+open_url: true
+strict_front_matter: true
+
+plugins:
+  - jekyll-tidy
