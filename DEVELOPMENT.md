@@ -31,4 +31,10 @@ Development
 Upgrading dependencies
 ----------------------
 
-    bundle update
+* To upgrade dependencies in Gemfile.lock & push them to the repository:
+
+      make maintenance
+
+* Manually upgrade dependencies in Gemfile.lock:
+
+      bundle update

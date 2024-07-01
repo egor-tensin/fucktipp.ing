@@ -14,6 +14,24 @@ ruby:
 deps: ruby
 	bundle install
 
+.PHONY: maintenance
+maintenance: ruby
+	bundle update
+
+	@git_status="$$( git status --porcelain=v1 )" && \
+	if [ -z "$$git_status" ]; then \
+		true ; \
+	elif [ "$$git_status" = ' M Gemfile.lock' ]; then \
+		git commit -am 'bump dependencies' && \
+			git push -q ; \
+	else \
+		echo ; \
+		echo '-----------------------------------------------------------------'; \
+		echo 'Error: unrecognized modifications in the repository'; \
+		echo '-----------------------------------------------------------------'; \
+		exit 1; \
+	fi
+
 jekyll := bundle exec jekyll
 
 .PHONY: build
