@@ -1,0 +1,22 @@
+name: Maintenance
+
+on:
+  schedule:
+    # Weekly, at 02:30 UTC on Friday (somewhat randomly chosen).
+    - cron: '30 02 * * 5'
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    name: Maintenance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Run maintenance
+        id: maintenance
+        run: make maintenance
