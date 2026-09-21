@@ -3,7 +3,7 @@ fucktipp.ing
 
 [![CI](https://github.com/egor-tensin/fucktipp.ing/actions/workflows/jekyll.yml/badge.svg)](https://github.com/egor-tensin/fucktipp.ing/actions/workflows/jekyll.yml)
 
-Fuck tipping: https://fucktipp.ing/.
+Fuck tipping: https://fucktipp.ing/
 
 Development
 -----------
